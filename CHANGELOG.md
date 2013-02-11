@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of ruby.
 
+## 0.1.2:
+
+* Remove unneeded dependencies
+
 ## 0.1.1:
 
 * Bump to 1.9.3-p385
