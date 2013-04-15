@@ -6,7 +6,7 @@
 #
 #
 
-ruby_version = '1.9.3-p385'
+ruby_version = '1.9.3-p392'
 ruby_version_concat = ruby_version.gsub(/-/,'')
 
 # Prereqs without which we can't get off the ground
