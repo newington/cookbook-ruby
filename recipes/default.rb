@@ -27,5 +27,7 @@ end
 
 # Gem prereqs - might need reloading if we picked up new ruby/rubygems
 %w(rake chef ohai bundler).each do |gem|
-  gem_package gem
+  gem_package gem do
+    action :upgrade
+  end
 end
