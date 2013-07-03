@@ -26,8 +26,14 @@ bash "ruby from source" do
 end
 
 # Gem prereqs - might need reloading if we picked up new ruby/rubygems
-%w(rake chef ohai bundler).each do |gem|
+%w(rake ohai bundler).each do |gem|
   gem_package gem do
     action :upgrade
   end
+end
+
+# http://tickets.opscode.com/browse/CHEF-3933
+gem_package 'chef' do
+  action :upgrade
+  options(:prerelease => true)
 end
