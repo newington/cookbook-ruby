@@ -26,14 +26,18 @@ bash "ruby from source" do
 end
 
 # Gem prereqs - might need reloading if we picked up new ruby/rubygems
-%w(rake ohai bundler).each do |gem|
+gems = { :rake => '10.1.0',
+         :bundler => '1.3.5' }
+
+gems.each do |gem, gem_version|
   gem_package gem do
-    action :upgrade
+    action :install
+    version gem_version
   end
 end
 
 # http://tickets.opscode.com/browse/CHEF-3933
 gem_package 'chef' do
-  action :upgrade
+  action :install
   options(:prerelease => true)
 end
