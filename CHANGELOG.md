@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of ruby.
 
+## 0.2.1
+
+* Change to how we do gems - specify versions
+
 ## 0.2.0
 
 * Move to ruby 2.0
