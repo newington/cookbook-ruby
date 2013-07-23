@@ -27,7 +27,6 @@ end
 
 # Gem prereqs - might need reloading if we picked up new ruby/rubygems
 gems = { 'chef' => '11.6.0.rc.4',
-         'rake' => '10.1.0',
          'bundler' => '1.3.5' }
 
 gems.each do |gem, gem_version|
