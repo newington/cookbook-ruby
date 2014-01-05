@@ -6,7 +6,7 @@
 #
 #
 
-ruby_version = '2.0.0-p247'
+ruby_version = '2.0.0-p353'
 ruby_version_concat = ruby_version.gsub(/-/,'')
 
 # Prereqs without which we can't get off the ground
@@ -26,8 +26,8 @@ bash "ruby from source" do
 end
 
 # Gem prereqs - might need reloading if we picked up new ruby/rubygems
-gems = { 'chef' => '11.6.0.rc.4',
-         'bundler' => '1.3.5' }
+gems = { 'chef' => '11.8.2',
+         'bundler' => '1.5.1' }
 
 gems.each do |gem, gem_version|
   gem_package gem do
