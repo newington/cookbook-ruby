@@ -6,7 +6,7 @@
 #
 #
 
-ruby_version = '2.0.0-p353'
+ruby_version = '2.1.0'
 ruby_version_concat = ruby_version.gsub(/-/,'')
 
 # Prereqs without which we can't get off the ground
@@ -18,7 +18,7 @@ bash "ruby from source" do
   user "root"
   cwd "/tmp"
   code <<-EOH
-  wget http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-#{ruby_version}.tar.gz
+  wget http://ftp.ruby-lang.org/pub/ruby/2.1/ruby-#{ruby_version}.tar.gz
   tar -xzf ruby-#{ruby_version}.tar.gz
   cd ruby-#{ruby_version} && ./configure --prefix=/usr/local && make && sudo make install
   EOH
