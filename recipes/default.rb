@@ -26,7 +26,8 @@ bash "ruby from source" do
 end
 
 # Gem prereqs - might need reloading if we picked up new ruby/rubygems
-gems = { 'chef' => '11.8.2',
+# skip chef for now as its a little funky on the EC2 boxes
+gems = { # 'chef' => '11.8.2',
          'bundler' => '1.5.1' }
 
 gems.each do |gem, gem_version|
