@@ -6,7 +6,7 @@
 #
 #
 
-ruby_version = '2.1.0'
+ruby_version = '2.1.1'
 ruby_version_concat = ruby_version.gsub(/-/,'')
 
 # Prereqs without which we can't get off the ground
@@ -28,7 +28,7 @@ end
 # Gem prereqs - might need reloading if we picked up new ruby/rubygems
 # skip chef for now as its a little funky on the EC2 boxes
 gems = { # 'chef' => '11.8.2',
-         'bundler' => '1.5.1' }
+         'bundler' => '1.5.3' }
 
 gems.each do |gem, gem_version|
   gem_package gem do
