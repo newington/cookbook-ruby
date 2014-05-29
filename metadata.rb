@@ -1,3 +1,4 @@
+name             "ruby"
 maintainer       "Myles Carrick"
 maintainer_email "mylescarrick@gmail"
 license          "MIT"
