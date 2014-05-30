@@ -17,8 +17,8 @@ bash "ruby from source" do
   cwd "/tmp"
   code <<-EOH
   wget http://ftp.ruby-lang.org/pub/ruby/2.1/ruby-#{node[:ruby][:version]}.tar.gz
-  tar -xzf ruby-#{ruby_version}.tar.gz
-  cd ruby-#{ruby_version} && ./configure --prefix=/usr/local && make && sudo make install
+  tar -xzf ruby-#{node[:ruby][:version]}.tar.gz
+  cd ruby-#{node[:ruby][:version]} && ./configure --prefix=/usr/local && make && sudo make install
   EOH
   not_if "ruby -v | grep #{ruby_version_concat}"
 end
